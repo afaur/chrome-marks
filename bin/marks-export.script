@@ -1,0 +1,22 @@
+tell application "Google Chrome"
+	if it is running then
+		activate
+		tell application "System Events" to keystroke "b" using {command down, option down}
+		delay 1
+		tell application "System Events" to keystroke "l" using {command down}
+		delay 1
+		tell application "System Events" to keystroke "javascript:chrome.bookmarks.export();"
+		delay 1
+		tell application "System Events" to keystroke return
+		delay 1
+		tell application "System Events" to keystroke "temp.html"
+		delay 1
+		tell application "System Events" to keystroke "g" using {command down, shift down}
+		delay 1
+		tell application "System Events" to keystroke "/tmp/"
+		delay 1
+		tell application "System Events" to keystroke return
+		delay 1
+		tell application "System Events" to keystroke return
+	end if
+end tell
